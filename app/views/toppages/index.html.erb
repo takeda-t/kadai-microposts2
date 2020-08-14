@@ -1,6 +1,10 @@
-<div class="center jumbotron">
+<% if logged_in? %>
+    <p>ログイン完了ユーザー： <%= current_user.name %></p>
+<% else %>
+    <div class="center jumbotron">
     <div class="text-center">
         <h1>Wellcome to the Microposts</h1>
         <%= link_to "Sign up now!", signup_path, class: "btn btn-primary bt-lg" %>
     </div>
 </div>
+<% end %>
